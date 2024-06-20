@@ -3,7 +3,9 @@ So to make dream real, I've created this mini program, numbers logic I did by my
 
 # How to use
 Write in console:
-`python obfuscate.py <filename> <power (optional, default: 50)> <times (optional, default: 1)>`
+```cmd
+python obfuscate.py <filename> <power (optional, default: 50)> <times (optional, default: 1)>
+```
 
 # Example
 Code in:
