@@ -1,5 +1,5 @@
 # Make your code as unreadable as possible
-So to make dream real, I've made this mini programm, numbers logic I've made by my hand, but for argument and vars thank for https://pyob.oxyry.com/
+So to make dream real, I've created this mini program, numbers logic I did by my self, but for arguments and vars thank for https://pyob.oxyry.com/
 
 # How to use
 Write in console:
