@@ -10,9 +10,7 @@ def obuscate(filename, power=50, times=1):
     link = "https://pyob.oxyry.com/obfuscate"
 
     with open(filename, "r") as f:
-        data = "def hvjhzdhfklhakhhgfxhhcuyi9832():\n" + "\n".join(
-            ["    " + i for i in f.readlines()]
-        )
+        data = f.readlines()
 
     payload = {
         "append_source": False,
@@ -23,16 +21,7 @@ def obuscate(filename, power=50, times=1):
         "source": data,
     }
 
-    result = "\n".join(
-        [
-            i[4:]
-            for i in (
-                json.loads(requests.post(link, json=payload).content)["dest"].split(
-                    "\n"
-                )[1:]
-            )
-        ]
-    )
+    result = json.loads(requests.post(link, json=payload).content)["dest"]
 
     with open(filename, "w") as f:
         f.write(re.sub(r"\#line:\d+", "", result))
